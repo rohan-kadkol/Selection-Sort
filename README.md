@@ -7,18 +7,18 @@ Versions 1-4 implement Selection Sort using the iterative method. All Code writt
 
 ```
 public static <T> void iterative(T[] items, Comparator<T> comparator) {
-        for (int i = 0; i < items.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < items.length; j++) {
-                if (comparator.compare(items[j],items[minIndex]) < 0) {
-                    minIndex = j;
-                }
+    for (int i = 0; i < items.length - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < items.length; j++) {
+            if (comparator.compare(items[j],items[minIndex]) < 0) {
+                minIndex = j;
             }
-            T temp = items[i];
-            items[i] = items[minIndex];
-            items[minIndex] = temp;
         }
+        T temp = items[i];
+        items[i] = items[minIndex];
+        items[minIndex] = temp;
     }
+}
 ```
 
 ## Version1-SortingIntegers
