@@ -1,28 +1,56 @@
 package com.rohankadkol;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
-        // Notice how the same SelectionSort.iterative() method is being used to sort Integers, Doubles, and Strings.
+        // Now along with the array of items, we also pass in a custom Comparator.
 
-        Integer[] sortedIntegers = SelectionSort.iterative(new Integer[]{7, 2, 13, 24, 3, 6, 10});
-        System.out.printf("%d", sortedIntegers[0]);
-        for (int i = 1; i < sortedIntegers.length; i++) {
-            System.out.printf(", %d", sortedIntegers[i]);
-        }
+        Integer[] integers = new Integer[]{7, 2, 13, 24, 3, 6, 10};
+        SelectionSort.iterative(integers, Comparators.integersAscending);
+        System.out.println(Arrays.toString(integers));
+        SelectionSort.iterative(integers, Comparators.integersDescending);
+        System.out.println(Arrays.toString(integers));
+
         System.out.println();
 
-        Double[] sortedDoubles = SelectionSort.iterative(new Double[]{7.3, 2.2, 13.5, 24.9, 3.1, 6.0, 10.2});
-        System.out.printf("%.1f", sortedDoubles[0]);
-        for (int i = 1; i < sortedDoubles.length; i++) {
-            System.out.printf(", %.1f", sortedDoubles[i]);
-        }
+        Double[] doubles = new Double[]{7.3, 2.2, 13.5, 24.9, 3.1, 6.0, 10.2};
+        SelectionSort.iterative(doubles, Comparators.doublesAscending);
+        System.out.println(Arrays.toString(doubles));
+        SelectionSort.iterative(doubles, Comparators.doublesDescending);
+        System.out.println(Arrays.toString(doubles));
+
         System.out.println();
 
-        String[] sortedStrings = SelectionSort.iterative(new String[]{"Albert", "Steven", "Bernard", "Juliet", "Samantha", "Jessica", "Darnell"});
-        System.out.printf("%s", sortedStrings[0]);
-        for (int i = 1; i < sortedStrings.length; i++) {
-            System.out.printf(", %s", sortedStrings[i]);
-        }
+        String[] strings = new String[]{"Albert", "Steven", "Bernard", "Juliet", "Samantha", "Jessica", "Darnell", "Mike", "Bo"};
+        SelectionSort.iterative(strings, Comparators.stringsAlphabeticallyAscending);
+        System.out.println(Arrays.toString(strings));
+        SelectionSort.iterative(strings, Comparators.stringsAlphabeticallyDescending);
+        System.out.println(Arrays.toString(strings));
+        SelectionSort.iterative(strings, Comparators.stringsLengthAscending);
+        System.out.println(Arrays.toString(strings));
+        SelectionSort.iterative(strings, Comparators.stringsLengthDescending);
+        System.out.println(Arrays.toString(strings));
+
+        System.out.println();
+
+        LsuTiger[] tigers = new LsuTiger[]{
+                new LsuTiger("89-122-9223", "Carol"),
+                new LsuTiger("89-621-7280", "Michael"),
+                new LsuTiger("89-443-8227", "Richard"),
+                new LsuTiger("89-378-1992", "Singh"),
+                new LsuTiger("89-310-0482", "Mikhail"),
+                new LsuTiger("89-745-2905", "Makayla"),
+                new LsuTiger("89-122-1211", "Tobias"),
+        };
+        SelectionSort.iterative(tigers, Comparators.tigersTigerCardNumberAscending);
+        System.out.println(Arrays.toString(tigers));
+        SelectionSort.iterative(tigers, Comparators.tigersTigerCardNumberDescending);
+        System.out.println(Arrays.toString(tigers));
+        SelectionSort.iterative(tigers, Comparators.tigersNameAlphabeticalAscending);
+        System.out.println(Arrays.toString(tigers));
+        SelectionSort.iterative(tigers, Comparators.tigersNameAlphabeticalDescending);
+        System.out.println(Arrays.toString(tigers));
     }
 }
