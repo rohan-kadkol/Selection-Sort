@@ -1,7 +1,13 @@
 package com.rohankadkol;
 
 public class SelectionSort {
-    public static int[] iterative(int[] items) {
+    /**
+     * Iterative Selection Sort Algorithm.
+     * Sort ints in ascending order.
+     * @param items items to be sorted
+     * @param <T> Generic type of each of the item in items
+     */
+    public static void iterative(int[] items) {
         for (int i = 0; i < items.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < items.length; j++) {
@@ -13,6 +19,5 @@ public class SelectionSort {
             items[i] = items[minIndex];
             items[minIndex] = temp;
         }
-        return items;
     }
 }
