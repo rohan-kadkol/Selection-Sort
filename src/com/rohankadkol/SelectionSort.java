@@ -10,7 +10,6 @@ public class SelectionSort {
      * Eg. We can sort Strings alphabetically, or by string length using the same method.
      * @param items items to be sorted
      * @param <T> Generic type of each of the item in items
-     * @return sorted array of items
      */
     public static <T> void iterative(T[] items, Comparator<T> comparator) {
         for (int i = 0; i < items.length - 1; i++) {
