@@ -5,7 +5,6 @@ public class SelectionSort {
      * Iterative Selection Sort Algorithm.
      * Sort ints in ascending order.
      * @param items items to be sorted
-     * @param <T> Generic type of each of the item in items
      */
     public static void iterative(int[] items) {
         for (int i = 0; i < items.length - 1; i++) {
