@@ -1,7 +1,7 @@
 # Selection Sort
 
 Selection sort algorithm implemented as different versions. Check the branches to see all the versions.
-Versions 1-4 implement Selection Sort using the iterative method. All Code written in Java.
+Versions 1-4 implement Selection Sort using the iterative method. All code is written in Java.
 
 ## Selection Sort Code
 
