@@ -7,9 +7,8 @@ public class SelectionSort {
      * Eg. Integers, Doubles, and Strings
      * @param items items to be sorted
      * @param <T> Generic type of each of the item in items
-     * @return sorted array of items
      */
-    public static <T extends Comparable<T>> T[] iterative(T[] items) {
+    public static <T extends Comparable<T>> void iterative(T[] items) {
         for (int i = 0; i < items.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < items.length; j++) {
@@ -21,6 +20,5 @@ public class SelectionSort {
             items[i] = items[minIndex];
             items[minIndex] = temp;
         }
-        return items;
     }
 }
