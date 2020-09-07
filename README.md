@@ -37,6 +37,24 @@ After sorting:
 
 We now modify the SelectionSort.iterative() method to sort an array of generic type T, instead of just ints.
 
+Sample Output:
+```
+Before sorting:
+[7, 2, 13, 24, 3, 6, 10]
+After sorting:
+[2, 3, 6, 7, 10, 13, 24]
+
+Before sorting:
+[7.3, 2.2, 13.5, 24.9, 3.1, 6.0, 10.2]
+After sorting:
+[2.2, 3.1, 6.0, 7.3, 10.2, 13.5, 24.9]
+
+Before sorting:
+[Albert, Steven, Bernard, Juliet, Samantha, Jessica, Darnell]
+After sorting:
+[Albert, Bernard, Darnell, Jessica, Juliet, Samantha, Steven]
+```
+
 ## Version3-SortingGenericTypeTWithACustomComparator
 
 The SelectionSort.iterative() method now takes a Comparator as a parameter. This enables us to use the same sorting 
