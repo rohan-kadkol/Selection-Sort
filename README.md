@@ -61,7 +61,48 @@ The SelectionSort.iterative() method now takes a Comparator as a parameter. This
 method to not only sort an array of a generic type, but also to sort it in different ways. Eg. We now can sort an array 
 of Strings in alphabetical order or by its String length. 
 
+Sample output for version 3 same as that for version 4.
+
 ## Version4-UsingLambdaFunctionsForComparators
 
 This version is an extension of Version 3. However, here we use Lambda Functions to create our custom comparator in 
 Comparators.java
+
+Sample output for versions 3 and 4:
+```
+Initial integers array:
+[7, 2, 13, 24, 3, 6, 10]
+Ascending integers:
+[2, 3, 6, 7, 10, 13, 24]
+Descending integers:
+[24, 13, 10, 7, 6, 3, 2]
+
+Initial doubles array:
+[7.3, 2.2, 13.5, 24.9, 3.1, 6.0, 10.2]
+Ascending doubles:
+[2.2, 3.1, 6.0, 7.3, 10.2, 13.5, 24.9]
+Descending doubles:
+[24.9, 13.5, 10.2, 7.3, 6.0, 3.1, 2.2]
+
+Initial strings array:
+[Albert, Steven, Bernard, Juliet, Samantha, Jessica, Darnell, Mike, Bo]
+Ascending alphabetical:
+[Albert, Bernard, Bo, Darnell, Jessica, Juliet, Mike, Samantha, Steven]
+Descending alphabetical:
+[Steven, Samantha, Mike, Juliet, Jessica, Darnell, Bo, Bernard, Albert]
+Ascending string lengths:
+[Bo, Mike, Juliet, Steven, Albert, Darnell, Bernard, Jessica, Samantha]
+Descending string lengths:
+[Samantha, Darnell, Bernard, Jessica, Albert, Juliet, Steven, Mike, Bo]
+
+Initial tigers array:
+[Carol (89-122-9223), Michael (89-621-7280), Richard (89-443-8227), Singh (89-378-1992), Mikhail (89-310-0482), Makayla (89-745-2905), Tobias (89-122-1211)]
+Ascending tiger card number:
+[Tobias (89-122-1211), Carol (89-122-9223), Mikhail (89-310-0482), Singh (89-378-1992), Richard (89-443-8227), Michael (89-621-7280), Makayla (89-745-2905)]
+Descending tiger card numbers:
+[Makayla (89-745-2905), Michael (89-621-7280), Richard (89-443-8227), Singh (89-378-1992), Mikhail (89-310-0482), Carol (89-122-9223), Tobias (89-122-1211)]
+Ascending names:
+[Carol (89-122-9223), Makayla (89-745-2905), Michael (89-621-7280), Mikhail (89-310-0482), Richard (89-443-8227), Singh (89-378-1992), Tobias (89-122-1211)]
+Descending names:
+[Tobias (89-122-1211), Singh (89-378-1992), Richard (89-443-8227), Mikhail (89-310-0482), Michael (89-621-7280), Makayla (89-745-2905), Carol (89-122-9223)]
+```
