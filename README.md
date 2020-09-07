@@ -25,6 +25,14 @@ public static <T> void iterative(T[] items, Comparator<T> comparator) {
 
 Here we just sort an array of ints.
 
+Sample Output:
+```
+Before sorting:
+[7, 2, 13, 24, 3, 6, 10]
+After sorting:
+[2, 3, 6, 7, 10, 13, 24]
+```
+
 ## Version2-SortingGenericTypeNamedT
 
 We now modify the SelectionSort.iterative() method to sort an array of generic type T, instead of just ints.
