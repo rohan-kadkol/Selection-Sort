@@ -24,4 +24,31 @@ public class SelectionSort {
             items[minIndex] = temp;
         }
     }
+
+    public static <T> void recursive(T[] items, Comparator<T> comparator) {
+        recursive(items, 0, items.length - 1, comparator);
+    }
+
+    private static <T> void recursive(T[] items, int start, int end, Comparator<T> comparator) {
+        if (start == end) {
+            return;
+        }
+
+        int minIndex = minIndex(items, start + 1, end, comparator);
+        if (comparator.compare(items[minIndex], items[start]) < 0) {
+            T temp = items[start];
+            items[start] = items[minIndex];
+            items[minIndex] = temp;
+        }
+        recursive(items, start + 1, end, comparator);
+    }
+
+    private static <T> int minIndex(T[] items, int start, int end, Comparator<T> comparator) {
+        if (start == end) {
+            return start;
+        }
+
+        int minIndex = minIndex(items, start + 1, end, comparator);
+        return comparator.compare(items[start], items[minIndex]) < 0 ? start : minIndex;
+    }
 }
