@@ -10,7 +10,7 @@ public class Main {
         Integer[] integers = new Integer[]{7, 2, 13, 24, 3, 6, 10};
         System.out.println("Before sorting:");
         System.out.println(Arrays.toString(integers));
-        SelectionSort.iterative(integers);
+        SelectionSort.recursive(integers);
         System.out.println("After sorting:");
         System.out.println(Arrays.toString(integers));
         System.out.println();
@@ -18,7 +18,7 @@ public class Main {
         Double[] doubles = new Double[]{7.3, 2.2, 13.5, 24.9, 3.1, 6.0, 10.2};
         System.out.println("Before sorting:");
         System.out.println(Arrays.toString(doubles));
-        SelectionSort.iterative(doubles);
+        SelectionSort.recursive(doubles);
         System.out.println("After sorting:");
         System.out.println(Arrays.toString(doubles));
         System.out.println();
@@ -26,7 +26,7 @@ public class Main {
         String[] strings = new String[]{"Albert", "Steven", "Bernard", "Juliet", "Samantha", "Jessica", "Darnell"};
         System.out.println("Before sorting:");
         System.out.println(Arrays.toString(strings));
-        SelectionSort.iterative(strings);
+        SelectionSort.recursive(strings);
         System.out.println("After sorting:");
         System.out.println(Arrays.toString(strings));
         System.out.println();

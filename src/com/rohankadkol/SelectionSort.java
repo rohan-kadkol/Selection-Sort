@@ -21,4 +21,31 @@ public class SelectionSort {
             items[minIndex] = temp;
         }
     }
+
+    public static <T extends Comparable<T>> void recursive(T[] items) {
+        recursive(items, 0, items.length - 1);
+    }
+
+    private static <T extends Comparable<T>> void recursive(T[] items, int start, int end) {
+        if (start == end) {
+            return;
+        }
+
+        int minIndex = minIndex(items, start + 1, end);
+        if (items[minIndex].compareTo(items[start]) < 0) {
+            T temp = items[start];
+            items[start] = items[minIndex];
+            items[minIndex] = temp;
+        }
+        recursive(items, start + 1, end);
+    }
+
+    private static <T extends Comparable<T>> int minIndex(T[] items, int start, int end) {
+        if (start == end) {
+            return start;
+        }
+
+        int minIndex = minIndex(items, start + 1, end);
+        return items[start].compareTo(items[minIndex]) < 0 ? start : minIndex;
+    }
 }
