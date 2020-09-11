@@ -1,7 +1,7 @@
 # Selection Sort
 
 Selection sort algorithm implemented as different versions. Check the branches to see all the versions.
-Versions 1-4 implement Selection Sort using the iterative method. All code is written in Java.
+Versions 1-4 implement Selection Sort using the iterative method. Versions 5-8 implement Selection Sort using the recursive method. All code is written in Java.
 
 ## Selection Sort Code
 
@@ -61,14 +61,7 @@ The SelectionSort.iterative() method now takes a Comparator as a parameter. This
 method to not only sort an array of a generic type, but also to sort it in different ways. Eg. We now can sort an array 
 of Strings in alphabetical order or by its String length. 
 
-Sample output for version 3 same as that for version 4.
-
-## Version4-UsingLambdaFunctionsForComparators
-
-This version is an extension of Version 3. However, here we use Lambda Functions to create our custom comparator in 
-Comparators.java
-
-Sample output for versions 3 and 4:
+Sample Output:
 ```
 Initial integers array:
 [7, 2, 13, 24, 3, 6, 10]
@@ -106,3 +99,26 @@ Ascending names:
 Descending names:
 [Tobias (89-122-1211), Singh (89-378-1992), Richard (89-443-8227), Mikhail (89-310-0482), Michael (89-621-7280), Makayla (89-745-2905), Carol (89-122-9223)]
 ```
+
+## Version4-UsingLambdaFunctionsForComparators
+
+This version is an extension of Version 3. However, here we use Lambda Functions to create our custom comparator in 
+Comparators.java
+
+Sample output for version 4 is same as version 3.
+
+## Version5-SortingIntegers-Recursive
+
+Same as version 1 but uses the recursive selection sort methods.
+
+## Version6-SortingGenericTypeNamedT-Recursive
+
+Same as version 2 but uses the recursive selection sort methods.
+
+## Version7-SortingGenericTypeNamedTWithCustomAComparator-Recursive
+
+Same as version 3 but uses the recursive selection sort methods.
+
+## Version8-UsingLambdaFunctionsForComparators-Recursive
+
+Same as version 4 but uses the recursive selection sort methods.
