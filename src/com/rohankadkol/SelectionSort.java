@@ -20,10 +20,20 @@ public class SelectionSort {
         }
     }
 
+    /**
+     * Public recursive selection sort algorithm.
+     * @param items items to be sorted
+     */
     public static void recursive(int[] items) {
         recursive(items, 0, items.length - 1);
     }
 
+    /**
+     * Private recursive selection sort algorithm.
+     * @param items items to be sorted
+     * @param start start index
+     * @param end end index
+     */
     private static void recursive(int[] items, int start, int end) {
         if (start == end) {
             return;
@@ -38,6 +48,13 @@ public class SelectionSort {
         recursive(items, start + 1, end);
     }
 
+    /**
+     * Finds the min index in items between indices start and end
+     * @param items items to be sorted
+     * @param start start index
+     * @param end end index
+     * @return the min index in items between indices start and end
+     */
     private static int minIndex(int[] items, int start, int end) {
         if (start == end) {
             return start;
