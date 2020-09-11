@@ -22,10 +22,22 @@ public class SelectionSort {
         }
     }
 
+    /**
+     * Public recursive selection sort algorithm. This sorts items of all types.
+     * @param items items to be sorted
+     * @param <T> type of each item in items
+     */
     public static <T extends Comparable<T>> void recursive(T[] items) {
         recursive(items, 0, items.length - 1);
     }
 
+    /**
+     * Private recursive selection sort algorithm. This sorts items of all types.
+     * @param items items to be sorted
+     * @param start start index
+     * @param end end index
+     * @param <T> type of each item in items
+     */
     private static <T extends Comparable<T>> void recursive(T[] items, int start, int end) {
         if (start == end) {
             return;
@@ -40,6 +52,14 @@ public class SelectionSort {
         recursive(items, start + 1, end);
     }
 
+    /**
+     * Finds the min index in items between indices start and end
+     * @param items items to be sorted
+     * @param start start index
+     * @param end end index
+     * @param <T> type of each item in items
+     * @return the min index in items between indices start and end
+     */
     private static <T extends Comparable<T>> int minIndex(T[] items, int start, int end) {
         if (start == end) {
             return start;
