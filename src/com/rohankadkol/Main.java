@@ -10,10 +10,10 @@ public class Main {
         Integer[] integers = new Integer[]{7, 2, 13, 24, 3, 6, 10};
         System.out.println("Initial integers array:");
         System.out.println(Arrays.toString(integers));
-        SelectionSort.iterative(integers, Comparators.integersAscending);
+        SelectionSort.recursive(integers, Comparators.integersAscending);
         System.out.println("Ascending integers:");
         System.out.println(Arrays.toString(integers));
-        SelectionSort.iterative(integers, Comparators.integersDescending);
+        SelectionSort.recursive(integers, Comparators.integersDescending);
         System.out.println("Descending integers:");
         System.out.println(Arrays.toString(integers));
 
@@ -22,10 +22,10 @@ public class Main {
         Double[] doubles = new Double[]{7.3, 2.2, 13.5, 24.9, 3.1, 6.0, 10.2};
         System.out.println("Initial doubles array:");
         System.out.println(Arrays.toString(doubles));
-        SelectionSort.iterative(doubles, Comparators.doublesAscending);
+        SelectionSort.recursive(doubles, Comparators.doublesAscending);
         System.out.println("Ascending doubles:");
         System.out.println(Arrays.toString(doubles));
-        SelectionSort.iterative(doubles, Comparators.doublesDescending);
+        SelectionSort.recursive(doubles, Comparators.doublesDescending);
         System.out.println("Descending doubles:");
         System.out.println(Arrays.toString(doubles));
 
@@ -34,16 +34,16 @@ public class Main {
         String[] strings = new String[]{"Albert", "Steven", "Bernard", "Juliet", "Samantha", "Jessica", "Darnell", "Mike", "Bo"};
         System.out.println("Initial strings array:");
         System.out.println(Arrays.toString(strings));
-        SelectionSort.iterative(strings, Comparators.stringsAlphabeticallyAscending);
+        SelectionSort.recursive(strings, Comparators.stringsAlphabeticallyAscending);
         System.out.println("Ascending alphabetical:");
         System.out.println(Arrays.toString(strings));
-        SelectionSort.iterative(strings, Comparators.stringsAlphabeticallyDescending);
+        SelectionSort.recursive(strings, Comparators.stringsAlphabeticallyDescending);
         System.out.println("Descending alphabetical:");
         System.out.println(Arrays.toString(strings));
-        SelectionSort.iterative(strings, Comparators.stringsLengthAscending);
+        SelectionSort.recursive(strings, Comparators.stringsLengthAscending);
         System.out.println("Ascending string lengths:");
         System.out.println(Arrays.toString(strings));
-        SelectionSort.iterative(strings, Comparators.stringsLengthDescending);
+        SelectionSort.recursive(strings, Comparators.stringsLengthDescending);
         System.out.println("Descending string lengths:");
         System.out.println(Arrays.toString(strings));
 
@@ -60,16 +60,16 @@ public class Main {
         };
         System.out.println("Initial tigers array:");
         System.out.println(Arrays.toString(tigers));
-        SelectionSort.iterative(tigers, Comparators.tigersTigerCardNumberAscending);
+        SelectionSort.recursive(tigers, Comparators.tigersTigerCardNumberAscending);
         System.out.println("Ascending tiger card number:");
         System.out.println(Arrays.toString(tigers));
-        SelectionSort.iterative(tigers, Comparators.tigersTigerCardNumberDescending);
+        SelectionSort.recursive(tigers, Comparators.tigersTigerCardNumberDescending);
         System.out.println("Descending tiger card numbers:");
         System.out.println(Arrays.toString(tigers));
-        SelectionSort.iterative(tigers, Comparators.tigersNameAlphabeticalAscending);
+        SelectionSort.recursive(tigers, Comparators.tigersNameAlphabeticalAscending);
         System.out.println("Ascending names:");
         System.out.println(Arrays.toString(tigers));
-        SelectionSort.iterative(tigers, Comparators.tigersNameAlphabeticalDescending);
+        SelectionSort.recursive(tigers, Comparators.tigersNameAlphabeticalDescending);
         System.out.println("Descending names:");
         System.out.println(Arrays.toString(tigers));
     }
