@@ -24,4 +24,54 @@ public class SelectionSort {
             items[minIndex] = temp;
         }
     }
+
+    /**
+     * Public recursive selection sort algorithm. This sorts items of all types.
+     * @param items items to be sorted
+     * @param comparator the comparator to define how to sort the items. Eg. ascending, descending, etc.
+     * @param <T> type of each item in items
+     */
+    public static <T> void recursive(T[] items, Comparator<T> comparator) {
+        recursive(items, 0, items.length - 1, comparator);
+    }
+
+    /**
+     * Private recursive selection sort algorithm. This sorts items of all types.
+     * @param items items to be sorted
+     * @param start start index
+     * @param end end index
+     * @param comparator the comparator to define how to sort the items. Eg. ascending, descending, etc.
+     * @param <T> type of each item in items
+     */
+    private static <T> void recursive(T[] items, int start, int end, Comparator<T> comparator) {
+        if (start == end) {
+            return;
+        }
+
+        int minIndex = minIndex(items, start + 1, end, comparator);
+        if (comparator.compare(items[minIndex], items[start]) < 0) {
+            T temp = items[start];
+            items[start] = items[minIndex];
+            items[minIndex] = temp;
+        }
+        recursive(items, start + 1, end, comparator);
+    }
+
+    /**
+     * Finds the min index in items between indices start and end
+     * @param items items to be sorted
+     * @param start start index
+     * @param end end index
+     * @param comparator the comparator to define how to sort the items. Eg. ascending, descending, etc.
+     * @param <T> type of each item in items
+     * @return the min index in items between indices start and end
+     */
+    private static <T> int minIndex(T[] items, int start, int end, Comparator<T> comparator) {
+        if (start == end) {
+            return start;
+        }
+
+        int minIndex = minIndex(items, start + 1, end, comparator);
+        return comparator.compare(items[start], items[minIndex]) < 0 ? start : minIndex;
+    }
 }
